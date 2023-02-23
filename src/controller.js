@@ -14,7 +14,7 @@ class Controller {
     static async listComicsRecent(req, res,next){
         const param = req.query.p || 1
         try {
-            const list = await Model.listComicsRecent(req.query.p)
+            const list = await Model.listComicsRecent(param)
             res.json(list)
         } catch (error) {
             next(error)
@@ -24,7 +24,7 @@ class Controller {
     static async listComicsNew(req, res,next){
         const param = req.query.p || 1
         try {
-            const list = await Model.listComicsNew(req.query.p)
+            const list = await Model.listComicsNew(param)
             res.json(list)
         } catch (error) {
             next(error)
@@ -34,7 +34,7 @@ class Controller {
     static async listComicsView(req, res,next){
         const param = req.query.p || 1
         try {
-            const list = await Model.listComicsView(req.query.p)
+            const list = await Model.listComicsView(param)
             res.json(list)
         } catch (error) {
             next(error)
