@@ -11,9 +11,12 @@ app.use(cors({
   origin : '*'
 }))
 
+console.log("run server")
+
 app.use("/api/v2",route)
 app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
